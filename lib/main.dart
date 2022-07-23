@@ -46,6 +46,8 @@ class MyHomePage extends StatelessWidget {
           onPressed: () {
             final int randInt = Random().nextInt(10);
             print('randInt: $randInt');
+
+            context.read<ThemeCubit>().changeTheme(randInt);
           },
         ),
       ),
